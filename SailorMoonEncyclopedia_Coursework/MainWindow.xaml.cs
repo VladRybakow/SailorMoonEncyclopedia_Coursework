@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SailorMoonEncyclopedia_Coursework.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,20 @@ namespace SailorMoonEncyclopedia_Coursework
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void AuthButton_Click(object sender, RoutedEventArgs e)
+        {
+            AuthWindow hmw = new AuthWindow();
+            hmw.Show();
+            this.Close();
+        }
+
+        private void RegisButton_Click(object sender, RoutedEventArgs e)
+        {
+            RegisWindow regis = new RegisWindow();
+            regis.Show();
+            this.Close();
         }
     }
 }
