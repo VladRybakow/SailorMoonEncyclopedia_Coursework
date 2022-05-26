@@ -42,7 +42,7 @@
         <Rectangle Grid.ColumnSpan="6" Grid.RowSpan="20"
                    Fill="#FFDA94" />
 
-        <TextBox x:Name="Name" 
+        <TextBox x:Name="name" 
                   Grid.Row="6" Grid.Column="1"
                   FontSize="20" Grid.ColumnSpan="4">
             <TextBox.Resources>
@@ -52,7 +52,7 @@
             </TextBox.Resources>
         </TextBox>
 
-        <TextBox x:Name="Email" 
+        <TextBox x:Name="email" 
                   Grid.Row="8" Grid.Column="1"
                   FontSize="20" Grid.ColumnSpan="4">
             <TextBox.Resources>
@@ -62,7 +62,7 @@
             </TextBox.Resources>
         </TextBox>
 
-        <TextBox x:Name="Password" 
+        <TextBox x:Name="password" 
                   Grid.Row="10" Grid.Column="1"
                   FontSize="20" Grid.ColumnSpan="4">
             <TextBox.Resources>
@@ -72,7 +72,7 @@
             </TextBox.Resources>
         </TextBox>
 
-        <TextBox x:Name="Telephone" 
+        <TextBox x:Name="telephone" 
                   Grid.Row="12" Grid.Column="1"
                   FontSize="20" Grid.ColumnSpan="4">
             <TextBox.Resources>

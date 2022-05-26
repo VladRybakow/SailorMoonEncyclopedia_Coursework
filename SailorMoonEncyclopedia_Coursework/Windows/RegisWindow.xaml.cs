@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SailorMoonEncyclopedia_Coursework.DB;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,9 +24,18 @@ namespace SailorMoonEncyclopedia_Coursework.Windows
 
         private void RegBTN_Click(object sender, RoutedEventArgs e)
         {
-            AdminWindow adm = new AdminWindow();
+            Users us = new Users(Convert.ToString(name.Text),
+                     Convert.ToString(email.Text),
+                     Convert.ToString(password.Text),
+                     double.Parse(telephone.Text),
+                     Convert.ToString("2"));
+            us.Add(us);
+            MessageBox.Show("Занесено в базу!");
+
+
+            MainWindow ewe = new MainWindow();
             this.Close();
-            adm.Show();
+            ewe.Show();
         }
     }
 }
