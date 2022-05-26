@@ -21,10 +21,11 @@ namespace SailorMoonEncyclopedia_Coursework.Windows
             InitializeComponent();
         }
 
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        private void RegBTN_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow main = new MainWindow();
-            main.Show();
+            AdminWindow adm = new AdminWindow();
+            this.Close();
+            adm.Show();
         }
     }
 }

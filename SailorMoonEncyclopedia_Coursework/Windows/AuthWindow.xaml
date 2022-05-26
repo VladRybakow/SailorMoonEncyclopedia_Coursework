@@ -17,26 +17,26 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
+            <RowDefinition Height="36*" />
+            <RowDefinition Height="36*" />
+            <RowDefinition Height="36*" />
+            <RowDefinition Height="36*" />
+            <RowDefinition Height="36*" />
+            <RowDefinition Height="36*" />
+            <RowDefinition Height="36*" />
+            <RowDefinition Height="36*" />
+            <RowDefinition Height="36*" />
+            <RowDefinition Height="36" />
+            <RowDefinition Height="36*" />
+            <RowDefinition Height="36*" />
+            <RowDefinition Height="36*" />
+            <RowDefinition Height="36*" />
+            <RowDefinition Height="36*" />
+            <RowDefinition Height="36*" />
+            <RowDefinition Height="37*" />
+            <RowDefinition Height="36*" />
+            <RowDefinition Height="36*" />
+            <RowDefinition Height="36*" />
         </Grid.RowDefinitions>
 
         <Rectangle Grid.ColumnSpan="6" Grid.RowSpan="20"
@@ -73,7 +73,7 @@
         <Button Content="Войти"
                 FontSize="20" Background="#FFAC42"
                 Grid.Column="2" Grid.ColumnSpan="2" 
-                Grid.Row="13">
+                Grid.Row="13" Click="HomeBTN_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15" />

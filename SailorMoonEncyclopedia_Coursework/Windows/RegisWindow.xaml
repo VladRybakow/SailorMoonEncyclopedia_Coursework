@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SailorMoonEncyclopedia_Coursework.Windows"
-        mc:Ignorable="d" Closing="Window_Closing" ResizeMode="NoResize"
+        mc:Ignorable="d" ResizeMode="NoResize"
         Title="RegisWindow" Height="750" Width="400">
     <Grid>
         
@@ -98,10 +98,10 @@
                VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center"
                Grid.Column="1" Grid.ColumnSpan="4" FontWeight="Bold"/>
 
-        <Button Content="Войти"
+        <Button Content="Войти" Click="RegBTN_Click"
                 FontSize="20" Background="#FFAC42"
                 Grid.Column="2" Grid.ColumnSpan="2" 
-                Grid.Row="15">
+                Grid.Row="15" Height="36" VerticalAlignment="Bottom" >
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15" />

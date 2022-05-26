@@ -7,10 +7,52 @@
         mc:Ignorable="d" Height="1080" Width="1920" ResizeMode="NoResize"
         Title="HomeWindow" WindowState="Maximized" WindowStyle="None">
     <Grid>
+
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="34*"/>
-            <ColumnDefinition Width="65*"/>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Rectangle Grid.ColumnSpan="10" Grid.RowSpan="10"
+                   Fill="#FFDA94" />
+
+        <Rectangle Grid.ColumnSpan="10" 
+                   Grid.Row="1" Grid.RowSpan="2"
+                   Fill="#FF8C1F" Margin="0,20,0,20"/>
+
+        <Rectangle Grid.RowSpan="10" Grid.Column="2"
+                   Fill="#FF8C1F" Margin="55,0,55,0"/>
+
+        <Rectangle Grid.RowSpan="10" Grid.Column="7"
+                   Fill="#FF8C1F" Margin="55,0,55,0"/>
+
+        <Rectangle Grid.Column="3" Grid.ColumnSpan="4" 
+                   Grid.Row="1" Grid.RowSpan="2" Margin="0,0,0,0"
+                   Fill="#FF8C1F" RadiusX="100" RadiusY="100" />
+
+        <Image Source="/Images/Logo.png" 
+               Grid.ColumnSpan="4" Grid.Column="3" 
+               Grid.Row="1" Grid.RowSpan="2"/>
 
     </Grid>
 </Window>

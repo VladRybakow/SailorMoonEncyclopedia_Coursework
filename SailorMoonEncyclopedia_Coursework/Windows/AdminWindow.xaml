@@ -4,9 +4,37 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SailorMoonEncyclopedia_Coursework.Windows"
-        mc:Ignorable="d"
-        Title="AdminWindow" Height="450" Width="800">
+        mc:Ignorable="d" ResizeMode="NoResize" WindowState="Maximized" WindowStyle="None"
+        Title="AdminWindow"  Height="1080" Width="1920">
     <Grid>
-        
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Rectangle Grid.ColumnSpan="10" Grid.RowSpan="10"
+                   Fill="#FFDA94" />
+
     </Grid>
 </Window>

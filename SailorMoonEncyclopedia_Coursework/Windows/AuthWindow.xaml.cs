@@ -26,5 +26,12 @@ namespace SailorMoonEncyclopedia_Coursework.Windows
             MainWindow main = new MainWindow();
             main.Show();
         }
+
+        private void HomeBTN_Click(object sender, RoutedEventArgs e)
+        {
+            HomeWindow home = new HomeWindow();
+            this.Close();
+            home.Show();
+        }
     }
 }
