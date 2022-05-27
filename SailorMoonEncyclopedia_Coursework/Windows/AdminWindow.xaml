@@ -33,8 +33,12 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <Rectangle Grid.ColumnSpan="10" Grid.RowSpan="10"
-                   Fill="#FFDA94" />
+        <Image Source="/Images/backphoto.jpg" Stretch="Fill"
+               Grid.ColumnSpan="12" Grid.RowSpan="12" Opacity="0.7"/>
 
+        <Rectangle Grid.Column="1" Grid.Row="1"
+            Grid.ColumnSpan="8" Grid.RowSpan="8"
+                   Fill="#FFDA94" />
+        
     </Grid>
 </Window>

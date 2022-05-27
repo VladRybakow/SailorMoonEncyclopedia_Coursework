@@ -33,26 +33,24 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <Rectangle Grid.ColumnSpan="10" Grid.RowSpan="10"
-                   Fill="#FFDA94" />
+        <Image Source="/Images/backphoto.jpg" Stretch="Fill"
+               Grid.ColumnSpan="12" Grid.RowSpan="12" Opacity="0.7"/>
 
-        <Rectangle Grid.ColumnSpan="10" 
-                   Grid.Row="1" Grid.RowSpan="2"
-                   Fill="#FF8C1F" Margin="0,20,0,20"/>
+        <Image Source="/Images/logotip.png" 
+               Grid.Column="1" Grid.Row="1"/>
 
-        <Rectangle Grid.RowSpan="10" Grid.Column="2"
-                   Fill="#FF8C1F" Margin="55,0,55,0"/>
-
-        <Rectangle Grid.RowSpan="10" Grid.Column="7"
-                   Fill="#FF8C1F" Margin="55,0,55,0"/>
+        <Label Content="Энциклопедия Сейлор Мун"
+               FontSize="40" FontFamily="Sitka Text"
+               VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+               Grid.ColumnSpan="3"
+               Grid.Row="1" Grid.Column="2"/>
 
         <Rectangle Grid.Column="3" Grid.ColumnSpan="4" 
-                   Grid.Row="1" Grid.RowSpan="2" Margin="0,0,0,0"
-                   Fill="#FF8C1F" RadiusX="100" RadiusY="100" />
+                   Grid.Row="2" Grid.RowSpan="7"
+                   Fill="#FFDA94" Margin="-55,0,-55,0"/>
 
-        <Image Source="/Images/Logo.png" 
-               Grid.ColumnSpan="4" Grid.Column="3" 
-               Grid.Row="1" Grid.RowSpan="2"/>
-
+        <ListView Background="#FFDA94" Margin="-55,0,-55,0"
+                  Grid.ColumnSpan="4" Grid.RowSpan="7"
+                  Grid.Row="2" Grid.Column="3"/>
     </Grid>
 </Window>
