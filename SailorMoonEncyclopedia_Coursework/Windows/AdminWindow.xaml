@@ -39,6 +39,79 @@
         <Rectangle Grid.Column="1" Grid.Row="1"
             Grid.ColumnSpan="8" Grid.RowSpan="8"
                    Fill="#FFDA94" />
-        
+
+        <Label Grid.Row="1" Content="Имя персонажа" FontSize="24" FontFamily="Sitka Text"
+               VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center"
+               Grid.Column="6" Grid.ColumnSpan="3" FontWeight="Bold"/>
+
+        <TextBox x:Name="name" 
+                 Margin="-40,20,-40,20"
+                 Grid.Row="2" Grid.Column="7"/>
+
+        <Label Grid.Row="3" Content="Краткое описание" FontSize="24" FontFamily="Sitka Text"
+               VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center"
+               Grid.Column="6" Grid.ColumnSpan="3" FontWeight="Bold" Margin="0,0,0,35"/>
+
+        <TextBox x:Name="ShortDescription"
+                 Margin="-40,0,-40,0"
+                 Grid.Row="4" Grid.Column="7"/>
+
+        <Label Grid.Row="5" Content="Описание" FontSize="24" FontFamily="Sitka Text"
+               VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center"
+               Grid.Column="6" Grid.ColumnSpan="3" FontWeight="Bold" Margin="0,0,0,35"/>
+
+        <TextBox x:Name="Description"
+                 Margin="-40,0,-40,0"
+                 Grid.Row="6" Grid.Column="7"/>
+
+        <Label Grid.Row="7" Content="Способности" FontSize="24" FontFamily="Sitka Text"
+               VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center"
+               Grid.Column="6" Grid.ColumnSpan="3" FontWeight="Bold" Margin="0,0,0,35"/>
+
+        <TextBox x:Name="Capabilities"
+                 Margin="-40,0,-40,10"
+                 Grid.Row="8" Grid.Column="7"/>
+
+        <Rectangle Fill="#FFAC42" RadiusX="20" RadiusY="20"
+                   Grid.Column="5" Grid.Row="2"/> 
+
+        <Image x:Name="image"
+               Grid.Column="5" Grid.Row="2"/>
+
+        <Button Content="Добавить фото" Margin="25,25"
+                FontSize="18" Background="#FFAC42"
+                Grid.Column="5" Grid.Row="4" >
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15" />
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button Content="Удалить фото" Margin="25,25"
+                FontSize="18" Background="#FFAC42"
+                Grid.Column="5" Grid.Row="5" >
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15" />
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button Margin="25,25"
+                FontSize="18" Background="#FFAC42"
+                Grid.Column="5" Grid.Row="7" >
+            <Button.Content>
+                <TextBlock TextWrapping="Wrap">
+                    Сохранить персонажа
+                </TextBlock>
+            </Button.Content>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15" />
+                </Style>
+            </Button.Resources>
+        </Button>
+
     </Grid>
 </Window>
