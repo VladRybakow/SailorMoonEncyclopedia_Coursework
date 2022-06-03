@@ -54,10 +54,10 @@
                   Grid.Row="2" Grid.Column="3" x:Name="listpers">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn x:Name="Image" Header="Логотип" Width="80" >
+                    <GridViewColumn x:Name="Image" Header="Логотип" Width="100" >
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Image x:Name="img" Source="{Binding _image}" Width="70"/>
+                                <Image x:Name="img" Source="{Binding _image}" Width="100"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -66,9 +66,9 @@
                     <GridViewColumn x:Name="shDesp" DisplayMemberBinding="{Binding _shortdescription}"
                       Header="Краткое описание" Width="150"/>
                     <GridViewColumn x:Name="descrip" DisplayMemberBinding="{Binding _description}"
-                      Header="Описание" Width="180"/>
+                      Header="Описание" Width="220"/>
                     <GridViewColumn x:Name="spec" DisplayMemberBinding="{Binding _capabilities}"
-                      Header="Способности" Width="170"/>
+                      Header="Способности" Width="180"/>
                 </GridView>
             </ListView.View>
         </ListView>

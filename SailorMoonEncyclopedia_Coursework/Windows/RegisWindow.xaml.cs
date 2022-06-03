@@ -28,7 +28,7 @@ namespace SailorMoonEncyclopedia_Coursework.Windows
                      Convert.ToString(email.Text),
                      Convert.ToString(password.Text),
                      double.Parse(telephone.Text),
-                     Convert.ToString("1"));
+                     Convert.ToString("2"));
 
             us.Add(us);
             MessageBox.Show("Занесено в базу!");
