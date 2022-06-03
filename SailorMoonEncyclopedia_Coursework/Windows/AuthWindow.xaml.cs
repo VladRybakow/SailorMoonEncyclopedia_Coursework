@@ -1,37 +1,57 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using MongoDB.Driver;
+using SailorMoonEncyclopedia_Coursework.DB;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace SailorMoonEncyclopedia_Coursework.Windows
 {
     public partial class AuthWindow : Window
     {
+        public static MongoClient client = new MongoClient();
         public AuthWindow()
         {
             InitializeComponent();
         }
 
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        public bool Auth(string nickname, string password)
         {
-            MainWindow main = new MainWindow();
-            main.Show();
+            var abase = client.GetDatabase("DB_SailorMoon");
+            var b = abase.GetCollection<Users>("users");
+            var listPerson = b.Find(Resorts => Resorts._email == nickname && Resorts._password == password).ToList().FirstOrDefault();
+            try
+            {
+                if (string.IsNullOrEmpty(nickname) || string.IsNullOrEmpty(password) || listPerson == null)
+                {
+                    MessageBox.Show("Введите логин и пароль или введены неправильные данные");
+                    return false;
+                }
+                else if (listPerson._email == nickname && listPerson._password == password && listPerson._role == "1")
+                {
+                    MessageBox.Show($"Добро пожаловать администратор: {listPerson._name} ");
+                    AdminWindow qwe = new AdminWindow();
+                    this.Close();
+                    qwe.Show();
+                }
+
+                else if (listPerson._email == nickname && listPerson._password == password && listPerson._role == "2")
+                {
+                    MessageBox.Show($"Добро пожаловать пользователь:  {listPerson._name}");
+                    HomeWindow qwe = new HomeWindow();
+                    this.Close();
+                    qwe.Show();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Введите логин и пароль или введены неправильные данные");
+            }
+
+            return true;
         }
 
-        private void HomeBTN_Click(object sender, RoutedEventArgs e)
+        private void Sign_Up_Click(object sender, RoutedEventArgs e)
         {
-            HomeWindow home = new HomeWindow();
-            this.Close();
-            home.Show();
+            Auth(email.Text, password.Text);
         }
     }
 }

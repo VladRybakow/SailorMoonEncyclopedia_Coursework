@@ -1,27 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.Win32;
+using MongoDB.Driver;
+using SailorMoonEncyclopedia_Coursework.DB;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace SailorMoonEncyclopedia_Coursework.Windows
 {
-    /// <summary>
-    /// Логика взаимодействия для HomeWindow.xaml
-    /// </summary>
     public partial class HomeWindow : Window
     {
+        public static MongoClient client = new MongoClient();
+        OpenFileDialog ofdImage = new OpenFileDialog();
+
         public HomeWindow()
         {
             InitializeComponent();
+            var abase = client.GetDatabase("DB_SailorMoon");
+            var b = abase.GetCollection<Character>("Character");
+            listpers.ItemsSource = b.AsQueryable().ToList();
         }
     }
 }

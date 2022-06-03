@@ -73,14 +73,14 @@
                  Grid.Row="8" Grid.Column="7"/>
 
         <Rectangle Fill="#FFAC42" RadiusX="20" RadiusY="20"
-                   Grid.Column="5" Grid.Row="2"/> 
+                   Grid.Column="5" Grid.Row="2"/>
 
-        <Image x:Name="image"
+        <Image x:Name="images"
                Grid.Column="5" Grid.Row="2"/>
 
         <Button Content="Добавить фото" Margin="25,25"
                 FontSize="18" Background="#FFAC42"
-                Grid.Column="5" Grid.Row="4" >
+                Grid.Column="5" Grid.Row="4" Click="BTNImage_Click" >
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15" />
@@ -90,7 +90,7 @@
 
         <Button Content="Удалить фото" Margin="25,25"
                 FontSize="18" Background="#FFAC42"
-                Grid.Column="5" Grid.Row="5" >
+                Grid.Column="5" Grid.Row="5" Click="BTNDel_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15" />
@@ -100,7 +100,7 @@
 
         <Button Margin="25,25"
                 FontSize="18" Background="#FFAC42"
-                Grid.Column="5" Grid.Row="7" >
+                Grid.Column="5" Grid.Row="6" Click="BTNCreate_Click">
             <Button.Content>
                 <TextBlock TextWrapping="Wrap">
                     Сохранить персонажа
@@ -112,6 +112,30 @@
                 </Style>
             </Button.Resources>
         </Button>
+
+        <ListView Background="#FFDA94" Margin="40,40"
+                  Grid.ColumnSpan="4" Grid.RowSpan="8"
+                  Grid.Row="1" Grid.Column="1" x:Name="listpers">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn x:Name="Image" Header="Логотип" Width="80" >
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image x:Name="img" Source="{Binding _image}" Width="70"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn x:Name="names"  DisplayMemberBinding="{Binding _name}"
+                      Header="Имя" Width="100"/>
+                    <GridViewColumn x:Name="shDesp" DisplayMemberBinding="{Binding _shortdescription}"
+                      Header="Краткое описание" Width="150"/>
+                    <GridViewColumn x:Name="descrip" DisplayMemberBinding="{Binding _description}"
+                      Header="Описание" Width="180"/>
+                    <GridViewColumn x:Name="spec" DisplayMemberBinding="{Binding _capabilities}"
+                      Header="Способности" Width="170"/>
+                </GridView>
+            </ListView.View>                
+        </ListView>
 
     </Grid>
 </Window>

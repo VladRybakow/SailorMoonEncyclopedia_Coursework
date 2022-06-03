@@ -28,10 +28,10 @@ namespace SailorMoonEncyclopedia_Coursework.Windows
                      Convert.ToString(email.Text),
                      Convert.ToString(password.Text),
                      double.Parse(telephone.Text),
-                     Convert.ToString("2"));
+                     Convert.ToString("1"));
+
             us.Add(us);
             MessageBox.Show("Занесено в базу!");
-
 
             MainWindow ewe = new MainWindow();
             this.Close();

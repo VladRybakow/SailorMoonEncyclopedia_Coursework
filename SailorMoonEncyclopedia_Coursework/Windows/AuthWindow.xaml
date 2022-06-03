@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SailorMoonEncyclopedia_Coursework.Windows"
-        mc:Ignorable="d" Closing="Window_Closing" ResizeMode="NoResize"
+        mc:Ignorable="d" ResizeMode="NoResize"
         Title="AuthWindow" Height="750" Width="400">
     <Grid>
 
@@ -42,7 +42,7 @@
         <Rectangle Grid.ColumnSpan="6" Grid.RowSpan="20"
                    Fill="#FFDA94" />
 
-        <TextBox x:Name="Login" 
+        <TextBox x:Name="email" TextWrapping="Wrap" 
                   Grid.Row="6" Grid.Column="1"
                   FontSize="20" Grid.ColumnSpan="4">
             <TextBox.Resources>
@@ -52,7 +52,7 @@
             </TextBox.Resources>
         </TextBox>
 
-        <TextBox x:Name="Password" 
+        <TextBox x:Name="password" TextWrapping="Wrap" 
                   Grid.Row="8" Grid.Column="1"
                   FontSize="20" Grid.ColumnSpan="4">
             <TextBox.Resources>
@@ -62,7 +62,7 @@
             </TextBox.Resources>
         </TextBox>
 
-        <Label Grid.Row="5" Content="Логин" FontSize="16" FontFamily="Sitka Text"
+        <Label Grid.Row="5" Content="E-mail" FontSize="16" FontFamily="Sitka Text"
                VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center"
                Grid.Column="1" Grid.ColumnSpan="4" FontWeight="Bold"/>
 
@@ -73,7 +73,7 @@
         <Button Content="Войти"
                 FontSize="20" Background="#FFAC42"
                 Grid.Column="2" Grid.ColumnSpan="2" 
-                Grid.Row="13" Click="HomeBTN_Click">
+                Grid.Row="13" Click="Sign_Up_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15" />

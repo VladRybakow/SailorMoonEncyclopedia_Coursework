@@ -51,6 +51,26 @@
 
         <ListView Background="#FFDA94" Margin="-55,0,-55,0"
                   Grid.ColumnSpan="4" Grid.RowSpan="7"
-                  Grid.Row="2" Grid.Column="3"/>
+                  Grid.Row="2" Grid.Column="3" x:Name="listpers">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn x:Name="Image" Header="Логотип" Width="80" >
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image x:Name="img" Source="{Binding _image}" Width="70"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn x:Name="names"  DisplayMemberBinding="{Binding _name}"
+                      Header="Имя" Width="100"/>
+                    <GridViewColumn x:Name="shDesp" DisplayMemberBinding="{Binding _shortdescription}"
+                      Header="Краткое описание" Width="150"/>
+                    <GridViewColumn x:Name="descrip" DisplayMemberBinding="{Binding _description}"
+                      Header="Описание" Width="180"/>
+                    <GridViewColumn x:Name="spec" DisplayMemberBinding="{Binding _capabilities}"
+                      Header="Способности" Width="170"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>

@@ -39,12 +39,12 @@ namespace SailorMoonEncyclopedia_Coursework.DB
         [BsonElement]
         public string _role { get => Role; set => Role = value; }
 
-        public void Add(Users us)
+        public void Add(Users users)
         {
             MongoClient client = new MongoClient();
-            var abase = client.GetDatabase("RybakovDB");
-            var b = abase.GetCollection<Users>("RER");
-            b.InsertOne(us);
+            var abase = client.GetDatabase("DB_SailorMoon");
+            var b = abase.GetCollection<Users>("users");
+            b.InsertOne(users);
         }
     }
 }
