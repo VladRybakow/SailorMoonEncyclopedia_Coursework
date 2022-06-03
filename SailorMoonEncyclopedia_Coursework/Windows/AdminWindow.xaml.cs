@@ -72,5 +72,9 @@ namespace SailorMoonEncyclopedia_Coursework.Windows
                 admin.Show();
             }
         }
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

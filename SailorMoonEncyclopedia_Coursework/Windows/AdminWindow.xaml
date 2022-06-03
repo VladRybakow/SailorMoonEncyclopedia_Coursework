@@ -134,8 +134,23 @@
                     <GridViewColumn x:Name="spec" DisplayMemberBinding="{Binding _capabilities}"
                       Header="Способности" Width="150"/>
                 </GridView>
-            </ListView.View>                
+            </ListView.View>
         </ListView>
+
+        <Button Margin="55,17,62,16"
+                FontSize="18" Background="#FFAC42"
+                Grid.Column="9" Click="Exit_Click">
+            <Button.Content>
+                <TextBlock TextWrapping="Wrap">
+                    Выход
+                </TextBlock>
+            </Button.Content>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15" />
+                </Style>
+            </Button.Resources>
+        </Button>
 
     </Grid>
 </Window>
