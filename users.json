@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "629a611e985bc91ec4b572e6"
+  },
+  "_name": "Артем",
+  "_email": "qwe@gmail.com",
+  "_password": "qwe",
+  "_phone": 89121212121,
+  "_role": "2"
+},{
+  "_id": {
+    "$oid": "629a6269aa30b336feb89286"
+  },
+  "_name": "Admin",
+  "_email": "admin@gmail.com",
+  "_password": "admin",
+  "_phone": 89372312353,
+  "_role": "1"
+}]
